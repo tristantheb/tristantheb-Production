@@ -13,20 +13,69 @@
                 <button class="btn btn-empty">About me</button>
             </div>
         </hgroup>
-        <div class="highlighting-box">
-            <h4 class="head-box head-marked">Highlight of latest events</h4>
-            <div class="highlight-news">
-                <h5><i class="fa fa-bullhorn"></i> %name.of.the.announce%</h5>
-                <p>%desc.of.the.announce%</p>
-                <a>Go to the news <i class="fa fa-chevron-right"></i></a>
+        {{ include('includes/last_news.html.twig') }}
+    </header>
+    <main class="bg-gray-900 md:h-screen py-8">
+        <div class="content flex justify-between">
+            <div class="w-1/2 px-8">
+                <h3 class="title-marked">Statistics</h3>
+                <div class="statistics flex justify-around">
+                    <div class="flex flex-col text-center">
+                        <div class="statistic-icon">
+                            <i class="far fa-newspaper"></i>
+                        </div>
+                        <p>%n <span class="text-blue-400">articles</span></p>
+                    </div>
+                    <div class="flex flex-col text-center">
+                        <div class="statistic-icon">
+                            <i class="fa fa-code-branch"></i>
+                        </div>
+                        <p>%n <span class="text-blue-400">projects</span></p>
+                    </div>
+                    <div class="flex flex-col text-center">
+                        <div class="statistic-icon">
+                            <i class="far fa-lightbulb"></i>
+                        </div>
+                        <p>%n <span class="text-blue-400">work in progress</span></p>
+                    </div>
+                </div>
+                <hr>
+                <h3 class="title-marked">My languages</h3>
+                <div class="flex mb-4">
+                    <i class="fab fa-html5 text-2xl w-8 mr-4"></i>
+                    <div class="progress-bar"><div class="progress" style="width:95%">95%</div></div>
+                </div>
+                <div class="flex mb-4">
+                    <i class="fab fa-css3 text-2xl w-8 mr-4"></i>
+                    <div class="progress-bar"><div class="progress" style="width:84%">84%</div></div>
+                </div>
+                <div class="flex mb-4">
+                    <i class="fab fa-js text-2xl w-8 mr-4"></i>
+                    <div class="progress-bar"><div class="progress" style="width:42%">42%</div></div>
+                </div>
+                <div class="flex mb-4">
+                    <i class="fab fa-php text-2xl w-8 mr-4"></i>
+                    <div class="progress-bar"><div class="progress" style="width:70%">70%</div></div>
+                </div>
+                <div class="flex mb-4">
+                    <i class="fab fa-java text-2xl w-8 mr-4"></i>
+                    <div class="progress-bar"><div class="progress" style="width:0%">j̸͓͓̬͍̏̽̿̓͂͜ȧ̶̡̼̞̙̫̗̭̙̹̳͕̾̄̌̌̎́̾̽ͅv̶͎̤͇̤̦̕ͅa̸̫͔̤͍͖͇̖͚͚͙͉̠͎̫̿̀̈́̈́̏͒͒̿͗̈ͅ.̶̳̓̑͊̄̃̅̃̑̏͗̏͝l̵̟̺̖͗̿͝ą̶͓͔̝͈̤̯̬͙̱̼̳͛͌̔́̅̕̚ņ̵̨̨̛͔͚͎̤͇͎̇̓͋͋͋̃͂̍͂̽͌̚̚͜͜g̴̭̘͈͇̺̒̀͠ͅ.̴͙͈̗̞̘̖͙̝̞͎̩̋̇̊͑̀̕̚͜ẻ̶̢̧͓̯͍̠̯̙̱́͛r̶̬̩̟͛̽̋̈́̔̈́̾͛̒̂͒̃͝͠ŗ̴̡̧͚͙̮̘͙͈̫̃̋̄̀̃͒͜ǫ̶̡̹̙̹̗͓̲̼̞̼̜̗̈́͜r̴͍͈̦̹͉̈̅̽̈̈́̀̄.̷̖̻̻͇̝̩̭̯̝̭̂͌͌̇͋̅́̈́͘͘͠6̴̼͉̺̯̰́̊͗̊̈́̅̽̏̅̀̚͝6̸̬͈͍͂̄̈̽́͒̽͝6̷͚͍̦͍̙̯̱͙͚͓́̀̐͝</div></div>
+                </div>
+                <hr>
+                <h3 class="title-marked">My framework</h3>
+                <div class="flex mb-4">
+                    <i class="fab fa-laravel text-2xl w-8 mr-4"></i>
+                    <div class="progress-bar"><div class="progress" style="width:5%">5%</div></div>
+                </div>
+                <div class="flex mb-4">
+                    <i class="fab fa-symfony text-2xl w-8 mr-4"></i>
+                    <div class="progress-bar"><div class="progress" style="width:45%">45%</div></div>
+                </div>
             </div>
-            <div class="highlight-news">
-                <h5><i class="fa fa-newspaper"></i> %name.of.the.article%</h5>
-                <p>%desc.of.the.article%</p>
-                <a>Go to the news <i class="fa fa-chevron-right"></i></a>
+            <div class="w-1/2 px-8">
+                <h3 class="title-marked">Recent projects</h3>
+                {{ include('includes/last_project.html.twig') }}
             </div>
         </div>
-    </header>
-    <div class="bg-gray-900 md:h-screen">
-    </div>
+    </main>
 {% endblock %}

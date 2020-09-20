@@ -26,11 +26,48 @@ a:hover::after, a:link:hover::after {
     width: 100%;
 }
 
-.head-marked {
+h3, h4, h5, h6 {
+    padding: 10px 0;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+h3 {
+    font-size: 1.725rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.125rem;
+}
+
+hr {
+    border-top-width: 0;
+    background: linear-gradient(45deg, #00e1ff, #43005e, #00e1ff);
+    height: 3px;
+    margin: 20px auto;
+    width: 60%;
+}
+
+.content {
+    margin: auto;
+    width: 80vw;
+}
+
+.title-marked {
     margin-bottom: 20px;
     position: relative;
 }
-.head-marked:after {
+.title-marked:after {
     background: #00e1ff;
     bottom: 0;
     content: "";
@@ -61,15 +98,6 @@ header {
 
 .highlight-news {
     margin-bottom: 8px;
-}
-
-.highlight-news h5 {
-    font-size: 1.125rem;
-}
-
-.head-box {
-    font-size: 1.25rem;
-    padding: 10px 0;
 }
 
 /** Menu **/
@@ -118,6 +146,32 @@ header {
     flex-direction: column;
 }
 
+/** Statistics **/
+.statistic-icon {
+    align-items: center;
+    border: 2px solid #00e1ff;
+    display: flex;
+    height: 80px;
+    justify-content: center;
+    margin: 35px;
+    transform: rotate(45deg);
+    transition: all 0.3s;
+    width: 80px;
+}
+.statistic-icon:hover {
+    transform: rotate(0deg);
+}
+.statistic-icon i {
+    height: 30px;
+    font-size: 30px;
+    transform: rotate(-45deg);
+    transition: all 0.3s;
+    width: 30px;
+}
+.statistic-icon:hover i {
+    transform: rotate(0deg);
+}
+
 /** Button design **/
 .btn {
     font-weight: bold;
@@ -155,4 +209,20 @@ header {
 }
 .btn-full:hover {
     background-color: #00e1ff;
+}
+
+/** Progress bar **/
+.progress-bar {
+    background: #0a101c;
+    height: 25px;
+    position: relative;
+    width: 100%;
+}
+.progress {
+    background: linear-gradient(135deg, #00e1ff, #43005e);
+    font-weight: bold;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    text-align: center;
 }
