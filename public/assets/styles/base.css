@@ -1,0 +1,158 @@
+body {
+    color: #fff;
+}
+
+a, a:link {
+    color: #00e1ff;
+    cursor: pointer;
+    position: relative;
+    transition: 0.7s all;
+}
+a::after, a:link::after {
+    background: #fff;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    position: absolute;
+    left: 0;
+    transition: width 0.7s;
+    width: 0;
+}
+
+a:hover, a:link:hover {
+    color: #fff;
+}
+a:hover::after, a:link:hover::after {
+    width: 100%;
+}
+
+.head-marked {
+    margin-bottom: 20px;
+    position: relative;
+}
+.head-marked:after {
+    background: #00e1ff;
+    bottom: 0;
+    content: "";
+    height: 3px;
+    position: absolute;
+    left: 0;
+    width: 100px;
+}
+
+/** Head of page **/
+header {
+    background: #43005e;
+    background: linear-gradient(335deg, #43005e 10%, #030362 55%, #0066dd 100%);
+}
+
+.site-head {
+    left: 5vw;
+    position: relative;
+    top: 25vh;
+}
+
+.highlighting-box {
+    position: absolute;
+    right: 5vw;
+    top: 25vh;
+    width: 30vw;
+}
+
+.highlight-news {
+    margin-bottom: 8px;
+}
+
+.highlight-news h5 {
+    font-size: 1.125rem;
+}
+
+.head-box {
+    font-size: 1.25rem;
+    padding: 10px 0;
+}
+
+/** Menu **/
+.site-menu {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+}
+
+.page-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    height: 100%;
+    padding: 5px 15px;
+    position: relative;
+}
+
+.menu-list {
+    right: 0;
+    position: absolute;
+}
+.menu-list, .submenu-list {
+    display: flex;
+}
+.menu-item a, .submenu-item a, .menu-label {
+    align-items: stretch;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50px;
+    text-align: center;
+    min-width: 180px;
+}
+.menu-item a:hover, .submenu-item a:hover, .menu-label:hover {
+    color: #00e1ff;
+}
+
+.submenu-list > li, .submenu-list > ul {
+    display: none;
+}
+.submenu-list:hover, .submenu-list:hover > li, .submenu-list:hover > ul {
+    display: flex;
+    flex-direction: column;
+}
+
+/** Button design **/
+.btn {
+    font-weight: bold;
+    padding: 15px 35px;
+    position: relative;
+}
+
+.btn-empty::before, .btn-empty::after {
+    content: "";
+    height: 25%;
+    position: absolute;
+    transition: 0.7s all;
+    width: 25%;
+}
+.btn-empty:hover::before, .btn-empty:hover::after {
+    height: 100%;
+    width: 100%;
+}
+.btn-empty::before {
+    border-left: 3px solid #00e1ff;
+    border-top: 3px solid #00e1ff;
+    left: 0;
+    top: 0;
+}
+.btn-empty::after {
+    border-bottom: 3px solid #00e1ff;
+    border-right: 3px solid #00e1ff;
+    bottom: 0;
+    right: 0;
+}
+
+.btn-full {
+    background-image: linear-gradient(125deg, transparent, transparent 25%, #00e1ff 100%);
+    transition: 0.7s all;
+}
+.btn-full:hover {
+    background-color: #00e1ff;
+}

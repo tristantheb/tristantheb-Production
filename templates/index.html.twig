@@ -1,0 +1,32 @@
+{% extends 'includes/base.html.twig' %}
+
+{% block title %}Index {{ parent() }}{% endblock %}
+
+{% block body %}
+    {% include 'includes/menu.html.twig' %}
+    <header class="md:h-screen">
+        <hgroup class="site-head inline-flex flex-col">
+            <h2 class="text-5xl">tristantheb Production & Community</h2>
+            <h3>Development with young ambitions and self-help community</h3>
+            <div class="flex justify-around p-10">
+                <button class="btn btn-full">Go on the Forum</button>
+                <button class="btn btn-empty">About me</button>
+            </div>
+        </hgroup>
+        <div class="highlighting-box">
+            <h4 class="head-box head-marked">Highlight of latest events</h4>
+            <div class="highlight-news">
+                <h5><i class="fa fa-bullhorn"></i> %name.of.the.announce%</h5>
+                <p>%desc.of.the.announce%</p>
+                <a>Go to the news <i class="fa fa-chevron-right"></i></a>
+            </div>
+            <div class="highlight-news">
+                <h5><i class="fa fa-newspaper"></i> %name.of.the.article%</h5>
+                <p>%desc.of.the.article%</p>
+                <a>Go to the news <i class="fa fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </header>
+    <div class="bg-gray-900 md:h-screen">
+    </div>
+{% endblock %}

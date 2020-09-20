@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}- tristantheb Production{% endblock %}</title>
+        <meta content="{{ page_description }}" name="description">
+        {% block stylesheets %}
+            <link href="{{ asset("assets/styles/tailwind.min.css") }}" rel="stylesheet">
+            <link href="{{ asset("assets/styles/fontawesome.min.css") }}" rel="stylesheet">
+            <link href="{{ asset("assets/styles/base.css") }}" rel="stylesheet">
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
