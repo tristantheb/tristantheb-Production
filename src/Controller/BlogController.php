@@ -5,12 +5,15 @@ namespace App\Controller;
 use App\Entity\Article;
 use App\Repository\ArticleRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class BlogController extends AbstractController
 {
     /**
      * @Route("/blog", name="blog")
+     * @param ArticleRepository $articleRepository
+     * @return Response
      */
     public function index(ArticleRepository $articleRepository)
     {
@@ -24,6 +27,8 @@ class BlogController extends AbstractController
 
     /**
      * @Route("/blog/{slug}", name="article")
+     * @param $slug
+     * @return Response
      */
     public function show($slug)
     {
