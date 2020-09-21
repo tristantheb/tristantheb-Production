@@ -14,7 +14,7 @@ class IndexController extends AbstractController
     {
         return $this->render('index.html.twig', [
             'page_description' => 'Description',
-            'page_name' => "tristantheb Production"
+            'page_name' => "tristantheb Production & Community"
         ]);
     }
 }
