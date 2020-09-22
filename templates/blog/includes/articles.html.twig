@@ -1,10 +1,10 @@
 {% for article in articles %}
-<article class="shadow-md">
-    <h4 class="article-head bg-blue-700 p-4"><a href="{{ path('article', {'slug': article.slug}) }}">{{ article.name }}</a></h4>
-    <p class="article-body bg-blue-600 p-4">
+<article class="article-box bg-gray-700">
+    <h4 class="article-head p-4"><a href="{{ path('article', {'slug': article.slug}) }}">{{ article.name }}</a></h4>
+    <p class="article-body p-4">
         {{ article.description }}
     </p>
-    <p class="article-foot bg-blue-700 p-4">
+    <p class="article-foot p-4">
         <small><i class="fa fa-clock"></i> {{ article.createdOn|date }}</small> - <span><i class="fa fa-tag"></i> {{ article.tag }}</span>
     </p>
 </article>

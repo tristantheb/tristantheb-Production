@@ -180,6 +180,37 @@ header {
     background: var(--tr-secondary);
 }
 
+/** Articles **/
+.article-head {
+    position: relative;
+}
+.article-head span, .article-head > a {
+    color: var(--tr-light);
+    position: relative;
+    z-index: 1;
+}
+
+.article-head::before {
+    background: var(--tr-secondary);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 94%;
+}
+.article-head::after {
+    background: var(--tr-blue);
+    content: "\f1ea";
+    font-family: "Font Awesome 5 Free", serif;
+    height: 100%;
+    right: 0;
+    padding: 1.5% 2%;
+    position: absolute;
+    top: 0;
+    width: 6%;
+}
+
 /** Statistics **/
 .statistic-icon {
     align-items: center;
