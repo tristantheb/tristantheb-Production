@@ -1,0 +1,127 @@
+{% extends 'includes/base.html.twig' %}
+
+{% block title %}{{ page_name }}{% endblock %}
+
+{% block body %}
+    {% include 'includes/menu.html.twig' %}
+    <header class="md:h-screen">
+        <hgroup class="site-head inline-flex flex-col">
+            <h1>{{ page_name }}</h1>
+            <h3>Development with young ambitions and self-help community</h3>
+            <div class="flex justify-around p-10">
+                <button class="btn btn-full">Go on the Forum</button>
+                <button class="btn btn-empty">About me</button>
+            </div>
+        </hgroup>
+        {{ include('includes/last_news.html.twig') }}
+    </header>
+    <div class="bg-gray-900 py-8">
+        <div class="content flex justify-between">
+            <div class="w-1/2 px-8">
+                <h3 class="title-marked">Statistics</h3>
+                <div class="statistics flex justify-around">
+                    <div class="flex flex-col text-center">
+                        <div class="statistic-icon">
+                            <i class="far fa-newspaper"></i>
+                        </div>
+                        <p>%n <span class="text-blue-400">articles</span></p>
+                    </div>
+                    <div class="flex flex-col text-center">
+                        <div class="statistic-icon">
+                            <i class="fa fa-code-branch"></i>
+                        </div>
+                        <p>%n <span class="text-blue-400">projects</span></p>
+                    </div>
+                    <div class="flex flex-col text-center">
+                        <div class="statistic-icon">
+                            <i class="far fa-lightbulb"></i>
+                        </div>
+                        <p>%n <span class="text-blue-400">work in progress</span></p>
+                    </div>
+                </div>
+                <hr>
+                <h3 class="title-marked">My languages</h3>
+                <div class="flex mb-4">
+                    <i class="fab fa-html5 text-2xl w-8 mr-4"></i>
+                    <div class="progress-bar"><div class="progress" style="width:95%">95%</div></div>
+                </div>
+                <div class="flex mb-4">
+                    <i class="fab fa-css3 text-2xl w-8 mr-4"></i>
+                    <div class="progress-bar"><div class="progress" style="width:84%">84%</div></div>
+                </div>
+                <div class="flex mb-4">
+                    <i class="fab fa-js text-2xl w-8 mr-4"></i>
+                    <div class="progress-bar"><div class="progress" style="width:42%">42%</div></div>
+                </div>
+                <div class="flex mb-4">
+                    <i class="fab fa-php text-2xl w-8 mr-4"></i>
+                    <div class="progress-bar"><div class="progress" style="width:70%">70%</div></div>
+                </div>
+                <div class="flex mb-4">
+                    <i class="fab fa-java text-2xl w-8 mr-4"></i>
+                    <div class="progress-bar"><div class="progress" style="width:0%">j̸͓͓̬͍̏̽̿̓͂͜ȧ̶̡̼̞̙̫̗̭̙̹̳͕̾̄̌̌̎́̾̽ͅv̶͎̤͇̤̦̕ͅa̸̫͔̤͍͖͇̖͚͚͙͉̠͎̫̿̀̈́̈́̏͒͒̿͗̈ͅ.̶̳̓̑͊̄̃̅̃̑̏͗̏͝l̵̟̺̖͗̿͝ą̶͓͔̝͈̤̯̬͙̱̼̳͛͌̔́̅̕̚ņ̵̨̨̛͔͚͎̤͇͎̇̓͋͋͋̃͂̍͂̽͌̚̚͜͜g̴̭̘͈͇̺̒̀͠ͅ.̴͙͈̗̞̘̖͙̝̞͎̩̋̇̊͑̀̕̚͜ẻ̶̢̧͓̯͍̠̯̙̱́͛r̶̬̩̟͛̽̋̈́̔̈́̾͛̒̂͒̃͝͠ŗ̴̡̧͚͙̮̘͙͈̫̃̋̄̀̃͒͜ǫ̶̡̹̙̹̗͓̲̼̞̼̜̗̈́͜r̴͍͈̦̹͉̈̅̽̈̈́̀̄.̷̖̻̻͇̝̩̭̯̝̭̂͌͌̇͋̅́̈́͘͘͠6̴̼͉̺̯̰́̊͗̊̈́̅̽̏̅̀̚͝6̸̬͈͍͂̄̈̽́͒̽͝6̷͚͍̦͍̙̯̱͙͚͓́̀̐͝</div></div>
+                </div>
+                <hr>
+                <h3 class="title-marked">My framework</h3>
+                <div class="flex mb-4">
+                    <i class="fab fa-laravel text-2xl w-8 mr-4"></i>
+                    <div class="progress-bar"><div class="progress" style="width:5%">5%</div></div>
+                </div>
+                <div class="flex mb-4">
+                    <i class="fab fa-symfony text-2xl w-8 mr-4"></i>
+                    <div class="progress-bar"><div class="progress" style="width:45%">45%</div></div>
+                </div>
+            </div>
+            <div class="w-1/2 px-8">
+                <h3 class="title-marked">Recent projects</h3>
+                {{ include('includes/last_project.html.twig') }}
+            </div>
+        </div>
+    </div>
+    <div class="work-box bg-black px-16 py-32">
+        <h2 class="title-marked">How do I work ?</h2>
+        <div class="statistics flex justify-around">
+            <div class="flex flex-col text-center">
+                <div class="statistic-icon">
+                    <i class="fa fa-search-location"></i>
+                </div>
+                <p>1. Research of needs</p>
+            </div>
+            <div class="flex flex-col text-center">
+                <div class="statistic-icon">
+                    <i class="far fa-handshake"></i>
+                </div>
+                <p>2. Agreeing of expectations</p>
+            </div>
+            <div class="flex flex-col text-center">
+                <div class="statistic-icon">
+                    <i class="far fa-map"></i>
+                </div>
+                <p>3. Work planning</p>
+            </div>
+            <div class="flex flex-col text-center">
+                <div class="statistic-icon">
+                    <i class="fa fa-paint-brush"></i>
+                </div>
+                <p>4. Design of the model</p>
+            </div>
+            <div class="flex flex-col text-center">
+                <div class="statistic-icon">
+                    <i class="fa fa-code"></i>
+                </div>
+                <p>5. Intense coding</p>
+            </div>
+            <div class="flex flex-col text-center">
+                <div class="statistic-icon">
+                    <i class="fa fa-truck"></i>
+                </div>
+                <p>6. Delivery to the costumer</p>
+            </div>
+        </div>
+    </div>
+    {{ include('includes/footer.html.twig') }}
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('assets/javascripts/index.js') }}"></script>
+{% endblock %}
